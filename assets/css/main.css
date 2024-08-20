@@ -8,6 +8,7 @@
     01.COMMON css 
 ===========================*/
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700&display=swap");
+
 html {
   scroll-behavior: smooth;
 }
@@ -241,9 +242,11 @@ p {
   0% {
     transform: translateY(30px);
   }
+
   50% {
     transform: translateY(-30px);
   }
+
   100% {
     transform: translateY(30px);
   }
@@ -354,24 +357,31 @@ p {
   12.5% {
     transform: rotate(135deg);
   }
+
   25% {
     transform: rotate(270deg);
   }
+
   37.5% {
     transform: rotate(405deg);
   }
+
   50% {
     transform: rotate(540deg);
   }
+
   62.5% {
     transform: rotate(675deg);
   }
+
   75% {
     transform: rotate(810deg);
   }
+
   87.5% {
     transform: rotate(945deg);
   }
+
   to {
     transform: rotate(1080deg);
   }
@@ -381,9 +391,11 @@ p {
   0% {
     transform: rotate(130deg);
   }
+
   50% {
     transform: rotate(-5deg);
   }
+
   to {
     transform: rotate(130deg);
   }
@@ -393,9 +405,11 @@ p {
   0% {
     transform: rotate(-130deg);
   }
+
   50% {
     transform: rotate(5deg);
   }
+
   to {
     transform: rotate(-130deg);
   }
@@ -426,7 +440,8 @@ p {
   padding: 17px 0;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
   .sticky .navbar {
     padding: 15px 0;
   }
@@ -452,7 +467,8 @@ p {
   padding: 20px 0;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
   .navbar {
     padding: 17px 0;
   }
@@ -499,7 +515,8 @@ p {
   top: -7px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
   .navbar-collapse {
     position: absolute;
     top: 100%;
@@ -517,7 +534,8 @@ p {
   margin-left: 40px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
   .navbar-nav .nav-item {
     margin-left: 20px;
   }
@@ -532,7 +550,8 @@ p {
   position: relative;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
   .navbar-nav .nav-item a {
     display: inline-block;
     padding: 6px 10px;
@@ -554,13 +573,15 @@ p {
   opacity: 0;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
   .navbar-nav .nav-item a::before {
     background: #487CFF;
   }
 }
 
-.navbar-nav .nav-item a:hover::before, .navbar-nav .nav-item a.active::before {
+.navbar-nav .nav-item a:hover::before,
+.navbar-nav .nav-item a.active::before {
   opacity: 1;
 }
 
@@ -626,7 +647,8 @@ p {
   color: #222;
 }
 
-.navbar-nav .nav-item .sub-menu li a.active, .navbar-nav .nav-item .sub-menu li a:hover {
+.navbar-nav .nav-item .sub-menu li a.active,
+.navbar-nav .nav-item .sub-menu li a:hover {
   padding-left: 25px;
   color: #487CFF;
 }
@@ -774,7 +796,8 @@ p {
   padding: 30px 0;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
   .client-logo-section .client-logo-wrapper {
     justify-content: center;
   }
@@ -1075,6 +1098,81 @@ p {
   color: #fff;
 }
 
+/* ======================
+    DELETE ACCOUNT PAGE CSS
+========================= */
+
+.delete-card {
+  width: 400px;
+  text-align: center;
+  border-radius: 4px;
+  border-top: 3px solid red;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.delete-card .delete-icon {
+  color: #fff;
+  background-color: red;
+  padding: 11px;
+  border-radius: 50%;
+  margin-top: -55px;
+}
+
+.delete-card input {
+  border: 1px solid var(--bs-dark);
+  padding: 10px 12px;
+  box-shadow: none !important;
+}
+
+.delete-card input:focus {
+  border: 2px solid var(--bs-primary);
+  padding: 9px 11px;
+}
+
+.delete-card .btn {
+  padding: 10px 20px;
+  border-radius: 4px !important;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.delete-card .btn-dark:hover {
+  background-color: red;
+  border: 1px solid red;
+}
+
+.delete-card .btn-dark-outline {
+  border: 1px solid var(--bs-dark);
+}
+
+.confirm-code {
+  width: 55px;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Chrome, Safari, and Opera */
+  appearance: none;
+  /* Standard syntax */
+}
+
+/* Additional styles to remove the spin buttons in Edge and Internet Explorer */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
 /* ======================
     DEFAULT CSS
 ========================= */

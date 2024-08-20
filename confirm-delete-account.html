@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>GOLDEN EGGS</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.svg" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap-5.0.0-beta2.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center pt-40 pb-40" style="min-height: 100vh;">
+        <div class="delete-card px-4 py-3">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg class="delete-icon" fill="#ffffff" width="60" height="60" version="1.1" id="lni_lni-trash-can"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                <g>
+                    <path d="M48.9,8.8h-7.7V7.1c0-3-2.4-5.4-5.4-5.4h-7.7c-3,0-5.4,2.4-5.4,5.4v1.7h-7.7c-2.9,0-5.3,2.4-5.3,5.3v3c0,2.2,1.3,4,3.2,4.8
+            		l1.6,34.6c0.2,3.3,2.8,5.8,6.1,5.8h22.5c3.3,0,6-2.6,6.1-5.8L51,21.8c1.9-0.8,3.2-2.7,3.2-4.8v-3C54.2,11.2,51.8,8.8,48.9,8.8z
+            		 M27.3,7.1c0-0.5,0.4-0.9,0.9-0.9h7.7c0.5,0,0.9,0.4,0.9,0.9v1.7h-9.4V7.1z M14.3,14.1c0-0.4,0.3-0.8,0.8-0.8h33.8
+            		c0.4,0,0.8,0.3,0.8,0.8v3c0,0.4-0.3,0.8-0.8,0.8H15.1c-0.4,0-0.8-0.3-0.8-0.8V14.1z M43.2,57.8H20.8c-0.9,0-1.6-0.7-1.6-1.5
+            		l-1.6-33.9h28.9l-1.6,33.9C44.8,57.1,44.1,57.8,43.2,57.8z" />
+                    <path
+                        d="M32,32.4c-1.2,0-2.3,1-2.3,2.3v12.7c0,1.2,1,2.3,2.3,2.3c1.2,0,2.3-1,2.3-2.3V34.7C34.3,33.4,33.2,32.4,32,32.4z" />
+                    <path d="M40,34.4c-1.3-0.1-2.3,0.8-2.4,2.1l-0.6,8.8c-0.1,1.2,0.8,2.3,2.1,2.4c0.1,0,0.1,0,0.2,0c1.2,0,2.2-0.9,2.2-2.1l0.6-8.8
+            		C42.1,35.5,41.2,34.5,40,34.4z" />
+                    <path d="M23.9,34.4c-1.2,0.1-2.2,1.2-2.1,2.4l0.7,8.8c0.1,1.2,1.1,2.1,2.2,2.1c0.1,0,0.1,0,0.2,0c1.2-0.1,2.2-1.2,2.1-2.4l-0.7-8.8
+            		C26.3,35.2,25.2,34.3,23.9,34.4z" />
+                </g>
+            </svg>
+            <h3 class="pt-20 pb-20 title">Введите код подтверждения</h3>
+
+            <button type="button" 
+                class="btn btn-dark-outline mt-20 w-100 home-btn" 
+                style="display: none;"
+                onclick="window.location.href = '/index.html'"
+            >Домой</button>
+
+            <form action="" id="confirmationForm">
+                <div class="d-flex justify-content-center">
+                    <input type="number" class="form-control confirm-code" max="9" oninput="moveToNext(this)">
+                    <input type="number" class="form-control confirm-code" max="9" oninput="moveToNext(this)">
+                    <input type="number" class="form-control confirm-code" max="9" oninput="moveToNext(this)">
+                    <input type="number" class="form-control confirm-code" max="9" oninput="moveToNext(this)">
+                </div>
+                <div class="btn-group d-flex gap-2">
+                    <button type="button" class="btn btn-dark-outline mt-20">Назад</button>
+                    <button type="submit" class="btn btn-dark mt-20">Удалить</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        function moveToNext(currentInput) {
+            if (currentInput.value.length >= currentInput.maxLength) {
+                const inputs = Array.from(currentInput.parentNode.getElementsByTagName('input'));
+                const currentIndex = inputs.indexOf(currentInput);
+                if (currentIndex < inputs.length - 1) {
+                    inputs[currentIndex + 1].focus();
+                }
+            }
+        }
+
+        document.getElementById('confirmationForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const inputs = Array.from(document.querySelectorAll('#confirmationForm input'));
+            const code = inputs.map(input => input.value).join('');
+
+            if (/^\d{4}$/.test(code)) { // Check if the code is a 4-digit number
+                document.querySelector('#confirmationForm').innerHTML = "";
+                document.querySelector('.home-btn').style.display = "block";
+                document.querySelector('.title').innerHTML = "Аккаунт удален";
+            }
+        })
+
+    </script>
+
+    <script src="assets/js/bootstrap-5.0.0-beta2.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/polifill.js"></script>
+</body>
+
+</html>
